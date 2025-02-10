@@ -5,14 +5,19 @@ import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
 
 class ViewPager2Adapter (fragment: FragmentActivity) : FragmentStateAdapter(fragment) {
-    override fun getItemCount(): Int = 3  // Number of tabs
+    private lateinit var listOfData: List<OnBoardingData>
+
+    init {
+        listOfData = listOf(
+            OnBoardingData("Welcome", "Discover amazing features", 0, "Next"),
+            OnBoardingData("Explore", "Find what you need quickly", 0, "Next"),
+            OnBoardingData("Get Started", "Join our community today", 0, "Get Started")
+        )
+    }
+
+    override fun getItemCount(): Int = listOfData.size // Number of tabs
 
     override fun createFragment(position: Int): Fragment {
-        return when (position) {
-            0 -> FragmentOnBoardingSatu()  // First tab
-            1 -> FragmentOnBoardingDua() // Second tab
-            2 -> FragmentOnBoardingTiga()  // Third tab
-            else -> FragmentOnBoardingSatu()
-        }
+        return FragmentOnBoardingSatu.newInstance(listOfData[position])
     }
 }

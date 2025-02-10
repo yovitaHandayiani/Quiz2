@@ -30,37 +30,13 @@ class ActivityOnBoarding : AppCompatActivity() {
         binding.viewPager.adapter = adapter
         binding.viewPager.isUserInputEnabled = true
 
-        binding.viewPager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
-            override fun onPageSelected(position: Int) {
-                super.onPageSelected(position)
-                Log.d("PageChanged", "Page selected: $position")
-            }
-        })
-
         TabLayoutMediator(binding.materialTabLayout, binding.viewPager) { tab, position ->
-            when (position) {
-                0 -> {
-                    binding.btnSkip.setOnClickListener {
-                        val intent = Intent(this, MainActivity::class.java);
-                        startActivity(intent)
-                    }
-                }
 
-                1 -> {
-                    binding.btnSkip.setOnClickListener {
-                        val intent = Intent(this, MainActivity::class.java);
-                        startActivity(intent)
-                    }
-                }
-
-                2 -> {
-                    binding.btnSkip.setOnClickListener {
-                        val intent = Intent(this, MainActivity::class.java);
-                        startActivity(intent)
-                    }
-                }
-            }
         }.attach()
 
+    }
+
+    fun getViewPager(): ViewPager2 {
+        return binding.viewPager
     }
 }
