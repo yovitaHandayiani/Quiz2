@@ -1,5 +1,6 @@
 package quiz.navigation
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -50,8 +51,10 @@ class FragmentOnBoardingSatu : Fragment() {
             if (nextPosition < (requireActivity() as? ActivityOnBoarding)?.getViewPager()?.adapter?.itemCount ?: 0) {
                 // Move the ViewPager2 to the next position
                 (requireActivity() as? ActivityOnBoarding)?.getViewPager()?.setCurrentItem(nextPosition, true)
-            }else if(){
-                
+            }else{
+                val intent = Intent(requireActivity(), MainActivity::class.java);
+                requireActivity().finish()
+                requireActivity().startActivity(intent)
             }
         }
 

@@ -1,6 +1,10 @@
 package quiz.navigation
 
 import android.content.Intent
+import android.graphics.drawable.ShapeDrawable
+import android.graphics.drawable.shapes.OvalShape
+import android.graphics.drawable.shapes.RectShape
+import android.graphics.drawable.shapes.RoundRectShape
 import android.os.Bundle
 import android.util.Log
 import androidx.activity.enableEdgeToEdge
@@ -29,10 +33,18 @@ class ActivityOnBoarding : AppCompatActivity() {
         val adapter = ViewPager2Adapter(this)
         binding.viewPager.adapter = adapter
         binding.viewPager.isUserInputEnabled = true
+//        binding.viewPager.setPageTransformer(ZoomOutPageTransformer())
+        binding.viewPager.setPageTransformer(DepthPageTransformer())
 
         TabLayoutMediator(binding.materialTabLayout, binding.viewPager) { tab, position ->
 
         }.attach()
+
+        binding.btnSkip.setOnClickListener {
+//            val intent = Intent(this, MainActivity::class.java);
+//            startActivity(intent)
+            (this.getViewPager()?.setCurrentItem(this.getViewPager()?.adapter?.itemCount ?: 0, true))
+        }
 
     }
 
