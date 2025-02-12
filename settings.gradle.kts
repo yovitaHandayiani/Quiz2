@@ -21,4 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "Quiz2"
 include(":app")
- 
+include(":uikit")
