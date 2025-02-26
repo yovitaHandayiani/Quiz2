@@ -1,0 +1,4 @@
+jd.co.edts.training.uikit
+color black
+color primary
+color white
