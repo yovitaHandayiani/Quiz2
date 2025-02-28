@@ -31,6 +31,15 @@
         </com.google.android.material.tabs.TabLayout>
 
     <Button
+        android:id="@+id/btnNextSatu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Next"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/materialTabLayout"
+        />
+
+    <Button
         android:id="@+id/btnSkip"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

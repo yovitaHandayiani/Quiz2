@@ -9,9 +9,9 @@ class ViewPager2Adapter (fragment: FragmentActivity) : FragmentStateAdapter(frag
 
     init {
         listOfData = listOf(
-            OnBoardingData("Welcome", "Discover amazing features", 0, "Next"),
-            OnBoardingData("Explore", "Find what you need quickly", 0, "Next"),
-            OnBoardingData("Get Started", "Join our community today", 0, "Get Started")
+            OnBoardingData("Welcome", "Discover amazing features", R.drawable.dimsums, "Next"),
+            OnBoardingData("Explore", "Find what you need quickly", R.drawable.dimsumd, "Next"),
+            OnBoardingData("Get Started", "Join our community today", R.drawable.dimsumt, "Get Started")
         )
     }
 

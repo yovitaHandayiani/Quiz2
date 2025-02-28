@@ -40,6 +40,25 @@ class ActivityOnBoarding : AppCompatActivity() {
 
         }.attach()
 
+        binding.btnNextSatu.setOnClickListener {
+            // Get the current position of the ViewPager2 from the activity using the method
+            val currentPosition = (this as? ActivityOnBoarding)?.getViewPager()?.currentItem ?: 0
+
+            // Calculate the next position
+            val nextPosition = currentPosition + 1
+
+            // Check if the next position is within bounds (i.e., not exceeding the number of items)
+            if (nextPosition < (this as? ActivityOnBoarding)?.getViewPager()?.adapter?.itemCount ?: 0) {
+                // Move the ViewPager2 to the next position
+                (this as? ActivityOnBoarding)?.getViewPager()?.setCurrentItem(nextPosition, true)
+            }else{
+                val intent = Intent(this, MainActivity::class.java);
+                this.finish()
+                this.startActivity(intent)
+            }
+        }
+
+
         binding.btnSkip.setOnClickListener {
 //            val intent = Intent(this, MainActivity::class.java);
 //            startActivity(intent)
