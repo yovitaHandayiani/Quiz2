@@ -1,19 +1,265 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello This Is Main Activity!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:orientation="vertical"
+        android:padding="16dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Animation Examples"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Property Animation Section -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Property Animation"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp" />
+
+        <Button
+            android:id="@+id/valueAnimatorButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Value Animator Example" />
+
+        <Button
+            android:id="@+id/objectAnimatorButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Object Animator Example" />
+
+        <Button
+            android:id="@+id/animatorSetButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Animator Set Example" />
+
+        <Button
+            android:id="@+id/viewPropertyButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="View Property Animator Example" />
+
+        <!-- View Animation Section -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="View Animation"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp" />
+
+        <Button
+            android:id="@+id/tweenAnimationButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tween Animation Example" />
+
+        <!-- Physics-Based Animation Section -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Physics-Based Animation"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp" />
+
+        <Button
+            android:id="@+id/springAnimationButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Spring Animation Example" />
+
+        <Button
+            android:id="@+id/flingAnimationButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Fling Animation Example" />
+
+        <!-- Drawable Animation Section -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Drawable Animation"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp" />
+
+        <Button
+            android:id="@+id/frameAnimationButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Frame-by-Frame Animation Example" />
+
+        <Button
+            android:id="@+id/vectorAnimationButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Animated Vector Drawable Example" />
+
+        <!-- MotionLayout Section -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="MotionLayout"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp" />
+
+        <Button
+            android:id="@+id/motionLayoutButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Motion Layout Example" />
+
+        <!-- Skeleton Loaders Section -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Skeleton Loaders"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp" />
+
+        <Button
+            android:id="@+id/skeletonLoaderButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Skeleton Loader Example" />
+
+        <!-- Shared Elements Section -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Shared Elements"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp" />
+
+        <Button
+            android:id="@+id/sharedElementButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Shared Element Example" />
+
+        <!-- Animation Target Views -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="24dp"
+            android:background="#EEEEEE">
+
+            <TextView
+                android:id="@+id/valueAnimatorTarget"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="#FF5722"
+                android:gravity="center"
+                android:text="Value"
+                android:textColor="#FFFFFF"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/objectAnimatorTarget"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:src="@android:drawable/ic_dialog_info"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/animatorSetTarget"
+                android:layout_width="120dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:text="Animate Me"
+                android:visibility="gone" />
+
+            <View
+                android:id="@+id/viewPropertyTarget"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="#4CAF50"
+                android:layout_gravity="center"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/tweenAnimationTarget"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_gravity="center"
+                android:src="@android:drawable/ic_menu_rotate"
+                android:visibility="gone" />
+
+            <View
+                android:id="@+id/springAnimationTarget"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="#2196F3"
+                android:layout_gravity="center"
+                android:visibility="gone" />
+
+            <View
+                android:id="@+id/flingAnimationTarget"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="#9C27B0"
+                android:layout_gravity="center_vertical"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/frameAnimationTarget"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/vectorAnimationTarget"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:visibility="gone" />
+
+            <FrameLayout
+                android:id="@+id/skeletonContainer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone" />
+        </FrameLayout>
+
+    </LinearLayout>
+</ScrollView>
+
+<!--<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:id="@+id/main"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    tools:context=".MainActivity">-->
+
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Hello This Is Main Activity!"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--</androidx.constraintlayout.widget.ConstraintLayout>-->

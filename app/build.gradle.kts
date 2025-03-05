@@ -51,4 +51,13 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
     implementation("com.google.android.material:material:1.6.0") // For TabLayout and ViewPager2
     implementation("androidx.viewpager2:viewpager2:1.0.0")  // For ViewPager2
+
+    // For MotionLayout
+    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
+
+    // For Physics-based animations
+    implementation("androidx.dynamicanimation:dynamicanimation:1.0.0")
+
+    // For AnimatedVectorDrawable
+    implementation("androidx.vectordrawable:vectordrawable-animated:1.1.0")
 }

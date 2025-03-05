@@ -40,6 +40,15 @@ class ActivityOnBoarding : AppCompatActivity() {
 
         }.attach()
 
+        //Update the button text based on current page
+        binding.viewPager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
+            override fun onPageSelected(position: Int) {
+                super.onPageSelected(position)
+                val onBoardingData = OnBoardingDataProvider.onBoardingItems[position]
+                binding.btnNextSatu.text = onBoardingData.buttonText
+            }
+        })
+
         binding.btnNextSatu.setOnClickListener {
             // Get the current position of the ViewPager2 from the activity using the method
             val currentPosition = (this as? ActivityOnBoarding)?.getViewPager()?.currentItem ?: 0
@@ -53,7 +62,7 @@ class ActivityOnBoarding : AppCompatActivity() {
                 (this as? ActivityOnBoarding)?.getViewPager()?.setCurrentItem(nextPosition, true)
             }else{
                 val intent = Intent(this, MainActivity::class.java);
-                this.finish()
+//                this.finish()
                 this.startActivity(intent)
             }
         }

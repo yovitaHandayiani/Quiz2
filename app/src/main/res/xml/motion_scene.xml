@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        app:constraintSetStart="@+id/start"
+        app:constraintSetEnd="@+id/end"
+        app:duration="1000">
+
+        <KeyFrameSet>
+            <KeyPosition
+                app:framePosition="50"
+                app:motionTarget="@id/motionBox"
+                app:keyPositionType="pathRelative"
+                app:percentY="0.3" />
+
+            <KeyAttribute
+                app:framePosition="25"
+                app:motionTarget="@id/motionBox"
+                android:scaleX="1.5"
+                android:scaleY="1.5" />
+
+            <KeyAttribute
+                app:framePosition="75"
+                app:motionTarget="@id/motionBox"
+                android:rotation="180" />
+        </KeyFrameSet>
+
+        <OnClick
+            app:targetId="@id/motionButton"
+            app:clickAction="toggle" />
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            android:id="@+id/motionBox"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="#FF0000"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp" />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:id="@+id/motionBox"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="#0000FF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/motionButton"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="32dp" />
+    </ConstraintSet>
+</MotionScene>
