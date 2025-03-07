@@ -60,4 +60,13 @@ dependencies {
 
     // For AnimatedVectorDrawable
     implementation("androidx.vectordrawable:vectordrawable-animated:1.1.0")
+
+    //Lottie
+    implementation("com.airbnb.android:lottie:3.4.0")
+
+    //Rive
+    implementation("app.rive:rive-android:9.6.5")
+    // During initialization, you may need to add a dependency
+    // for Jetpack Startup
+    implementation("androidx.startup:startup-runtime:1.1.1")
 }
