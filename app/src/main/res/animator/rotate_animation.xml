@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<objectAnimator xmlns:android="http://schemas.android.com/apk/res/android"
+    android:duration="1000"
+    android:propertyName="rotation"
+    android:valueFrom="0"
+    android:valueTo="360"
+    android:repeatCount="infinite"
+    android:repeatMode="reverse"
+    android:interpolator="@android:anim/accelerate_decelerate_interpolator"/>
+
+
+
+<!--<objectAnimator xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    android:duration="1000" &lt;!&ndash; 1 second &ndash;&gt;-->
+<!--    android:propertyName="rotation" &lt;!&ndash; Rotate the star &ndash;&gt;-->
+<!--    android:valueFrom="0" &lt;!&ndash; Start from 0 degrees &ndash;&gt;-->
+<!--    android:valueTo="360" &lt;!&ndash; Rotate to 360 degrees &ndash;&gt;-->
+<!--    android:repeatCount="infinite" &lt;!&ndash; Keep repeating &ndash;&gt;-->
+<!--    android:interpolator="@android:anim/linear_interpolator"/> &lt;!&ndash; Smooth rotation &ndash;&gt;-->
