@@ -76,6 +76,10 @@ class MainActivity : AppCompatActivity() {
 //
 //
 //        binding.email.addTextChangedListener(object  : TextWatcher{
+//          // p0: The current text before the change.
+//          // p1: The starting position of the change.
+//          // p2: The number of characters to be replaced.
+//          // p3: The number of new characters to be added.
 //            override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
 //
 //            }
