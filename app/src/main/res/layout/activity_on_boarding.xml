@@ -24,6 +24,7 @@
         app:layout_constraintTop_toBottomOf="@+id/viewPager"
         app:tabBackground="@drawable/tab_selector"
         app:tabIndicatorHeight="0dp"
+        style="@style/CustomTabLayout"
         app:tabMode="fixed">
 
     </com.google.android.material.tabs.TabLayout>

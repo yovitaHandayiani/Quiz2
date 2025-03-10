@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape android:shape="rectangle"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#E7EDEB" /> <!-- Your background color -->
+    <corners android:radius="12dp" />
+</shape>
+
+<!--<layer-list xmlns:android="http://schemas.android.com/apk/res/android">-->
+<!--    &lt;!&ndash; Layer 1: Solid background color &ndash;&gt;-->
+<!--    <item>-->
+<!--        <shape android:shape="rectangle">-->
+<!--            <solid android:color="#E7EDEB" /> &lt;!&ndash; Your background color &ndash;&gt;-->
+<!--            <corners android:radius="12dp" />-->
+<!--        </shape>-->
+<!--    </item>-->
+
+<!--    &lt;!&ndash; Layer 2: Ripple effect &ndash;&gt;-->
+<!--    <item>-->
+<!--        <ripple android:color="?attr/colorControlHighlight"> &lt;!&ndash; Ripple color &ndash;&gt;-->
+<!--            <item>-->
+<!--                <shape android:shape="rectangle">-->
+<!--                    <solid android:color="#E7EDEB" /> &lt;!&ndash; Transparent background &ndash;&gt;-->
+<!--                    <corners android:radius="12dp" />-->
+<!--                </shape>-->
+<!--            </item>-->
+<!--        </ripple>-->
+<!--    </item>-->
+<!--</layer-list>-->
+
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<ripple xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--android:color="?attr/colorControlHighlight"> &lt;!&ndash; Ripple color &ndash;&gt;-->
+<!--<item>-->
+<!--    <shape android:shape="rectangle">-->
+<!--        <solid android:color="#E7EDEB" /> &lt;!&ndash; Transparent background &ndash;&gt;-->
+<!--        <corners android:radius="12dp" />-->
+<!--    </shape>-->
+<!--</item>-->
+<!--</ripple>-->
