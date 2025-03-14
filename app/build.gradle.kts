@@ -69,4 +69,6 @@ dependencies {
     // During initialization, you may need to add a dependency
     // for Jetpack Startup
     implementation("androidx.startup:startup-runtime:1.1.1")
+
+    implementation("com.facebook.shimmer:shimmer:0.5.0")
 }

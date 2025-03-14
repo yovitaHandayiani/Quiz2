@@ -14,6 +14,7 @@ import android.util.AttributeSet
 import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.AccelerateDecelerateInterpolator
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatImageView
@@ -42,6 +43,7 @@ class SecondActivity : AppCompatActivity() {
         // Set the target (the star image view)
         rotationAnimator.setTarget(binding.starImageView)
 
+        rotationAnimator.setInterpolator(AccelerateDecelerateInterpolator())
         // Start the animation
         rotationAnimator.start()
 
@@ -75,7 +77,7 @@ class SecondActivity : AppCompatActivity() {
                     binding.bellImageView.rotation = 0f
                 }
             })
-
+            set.setInterpolator(AccelerateDecelerateInterpolator())
             set.start()
         }
 
@@ -92,6 +94,7 @@ class SecondActivity : AppCompatActivity() {
                         .scaleX(0.8f)
                         .scaleY(0.8f)
                         .setDuration(150)
+                        .setInterpolator(AccelerateDecelerateInterpolator())
                         .start()
                 }
 
@@ -103,6 +106,7 @@ class SecondActivity : AppCompatActivity() {
                         .scaleX(1f)
                         .scaleY(1f)
                         .setDuration(150)
+                        .setInterpolator(AccelerateDecelerateInterpolator())
                         .start()
                     view.performClick()
                 }
@@ -115,6 +119,7 @@ class SecondActivity : AppCompatActivity() {
                         .scaleX(1f)
                         .scaleY(1f)
                         .setDuration(150)
+                        .setInterpolator(AccelerateDecelerateInterpolator())
                         .start()
                 }
             }
@@ -146,6 +151,7 @@ class SecondActivity : AppCompatActivity() {
                                     .scaleX(0.8f)
                                     .scaleY(0.8f)
                                     .setDuration(150)
+                                    .setInterpolator(AccelerateDecelerateInterpolator())
                                     .start()
                             }
 
@@ -155,6 +161,7 @@ class SecondActivity : AppCompatActivity() {
                                     .scaleX(1f)
                                     .scaleY(1f)
                                     .setDuration(150)
+                                    .setInterpolator(AccelerateDecelerateInterpolator())
                                     .start()
 
                                 // Ensure click is still performed
@@ -167,6 +174,7 @@ class SecondActivity : AppCompatActivity() {
                                     .scaleX(1f)
                                     .scaleY(1f)
                                     .setDuration(150)
+                                    .setInterpolator(AccelerateDecelerateInterpolator())
                                     .start()
                             }
                         }
